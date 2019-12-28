@@ -18,14 +18,16 @@ public class UserServiceImpl implements UserService{
 		// TODO Auto-generated method stub
 		//调用mapper实现注册
 		SysUser u0 = userMapper.selectUserByUsername(user.getUsername());
+		System.out.println(user);
 		int i = -1;
 		if(u0==null) {
+			System.out.println(user);
 			i = userMapper.insertUser(user);
 		}else {
 			i = 2;
 		}
 		
-		return 0;
+		return i;
 	}
 
 	
