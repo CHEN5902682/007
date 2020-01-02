@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        <mapper namespace="edu.swjtuhc.demo.mapper.AlterMapper">
+        <insert id="insertUser" parameterType="edu.swjtuhc.demo.model.SysUser">
+   insert into sysuser
+   (username,password,age)
+    values
+    (#{username},#{password},#{age})
+</insert>
+	<update id="updateUserPwdByUid" parameterType="edu.swjtuhc.demo.model.SysUser">
+        update sysuser
+        set password = #{password}
+        where uid = #{uid}
+    </update>
+
+
+        </mapper>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="edu.swjtuhc.demo.mapper.LoginMapper">
+        <insert id="insertUser" parameterType="edu.swjtuhc.demo.model.SysUser">
+   insert into sysuser
+   (username,password,age,sex)
+    values
+    (#{username},#{password},#{age},#{sex})
+</insert>
+<select id="selectUserByUsername" parameterType="java.lang.String" resultType="edu.swjtuhc.demo.model.SysUser"> 
+         select * from sysuser
+         where
+         username = #{username}
+</select>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </mapper>
